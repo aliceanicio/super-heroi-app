@@ -1,0 +1,32 @@
+<div class="form-container">
+  <h2>Banco de Heróis</h2>
+
+  <!-- Barra de pesquisa -->
+  <div class="search-container">
+    <input type="text" placeholder="Pesquisar herói..." [(ngModel)]="searchTerm" (input)="filtrarHerois()"
+      class="search-input" />
+  </div>
+
+  <!-- Lista de heróis cadastrados -->
+  <div class="banco-herois-container">
+
+    <div class="herois-list">
+      <div *ngFor="let heroi of herois" class="heroi-card">
+        <div class="heroi-header">
+          <span><strong>{{ heroi.nomeHeroi }}</strong></span>
+          <mat-icon class="expand-icon" (click)="toggleDetails(heroi)">
+            {{ heroi.showDetails ? 'expand_less' : 'expand_more' }}
+          </mat-icon>
+        </div>
+        <div *ngIf="heroi.showDetails" class="heroi-details">
+          <p><strong>Nome:</strong> {{ heroi.nome }}</p>
+          <p><strong>Super Poderes:</strong> {{ heroi.superPoderes }}</p>
+          <p><strong>Data de Nascimento:</strong> {{ heroi.dataNascimento | date: 'dd/MM/yyyy' }}</p>
+          <p><strong>Altura:</strong> {{ heroi.altura }} cm</p>
+          <p><strong>Peso:</strong> {{ heroi.peso }} kg</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="form-button salvar voltar" (click)="voltar()">Voltar</button>
+</div>

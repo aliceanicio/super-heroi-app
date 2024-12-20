@@ -1,0 +1,144 @@
+.form-container {
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.search-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 97%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+}
+
+.banco-herois-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.form-button.salvar.voltar {
+  background-color: #3d3537;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 20px;
+  align-self: center;
+  /* Botão alinhado ao início */
+  font-weight: 600;
+}
+
+.form-button.salvar.voltar:hover {
+  background-color: #f9db05;
+  color: black;
+}
+
+.herois-list {
+  width: 90%;
+  /* Retorna ao comportamento original */
+  height: calc(100vh - 200px);
+  /* Calcula o espaço, considerando o cabeçalho e o botão "Voltar" */
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scrollbar-width: thin;
+  scrollbar-color: #3d3537 black;
+}
+
+.herois-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.herois-list::-webkit-scrollbar-track {
+  background: black;
+}
+
+.herois-list::-webkit-scrollbar-thumb {
+  background-color: #3d3537;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.herois-list::-webkit-scrollbar-thumb:hover {
+  background-color: #f9db05;
+}
+
+.heroi-card {
+  background-color: #333;
+  color: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  width: 100%;
+  /* Ocupa 100% da largura disponível dentro de herois-list */
+  text-align: left;
+  box-sizing: border-box;
+  position: relative;
+  /* Necessário para posicionar o ícone */
+}
+
+.expand-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.expand-icon:hover {
+  color: #f9db05;
+}
+
+.heroi-details {
+  margin-top: 10px;
+  font-size: 14px;
+  padding-left: 10px;
+  border-left: 2px solid #f9db05;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: white;
+  border-bottom: 2px solid #3d3537;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+  font-family: 'Quicksand', sans-serif;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f9db05;
+}

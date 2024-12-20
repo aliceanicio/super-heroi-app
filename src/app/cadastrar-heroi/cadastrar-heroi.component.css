@@ -1,0 +1,145 @@
+/* Defina a fonte para todo o projeto */
+body {
+  font-family: 'Quicksand', sans-serif;
+  /* Substitua por sua fonte do projeto */
+}
+
+/* Estilo para o contêiner do formulário */
+.form-container {
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Formulário e seus elementos */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Estilos para inputs e textarea */
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: none;
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: #1f1f1f;
+  color: white;
+  border-bottom: 2px solid #3d3537;
+  border-radius: 5px;
+  transition: border-color 0.3s ease-in-out;
+  font-family: 'Quicksand', sans-serif;
+}
+
+/* Foco no input: linha amarela para o input selecionado */
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #f9db05;
+  /* Linha amarela ao focar no input */
+}
+
+/* Remover ícone de calendário no campo de data */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+/* Remover os botões de aumento e diminuição de número (altura e peso) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Personalizando a rolagem do textarea e inputs */
+input::-webkit-scrollbar,
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+input::-webkit-scrollbar-track,
+textarea::-webkit-scrollbar-track {
+  background: #333;
+}
+
+input::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-thumb {
+  background-color: #3d3537;
+  border-radius: 5px;
+}
+
+input::-webkit-scrollbar-thumb:hover,
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: #f9db05;
+}
+
+/* Personalizando a rolagem quando o input ou textarea estiverem em foco */
+input:focus::-webkit-scrollbar-thumb,
+textarea:focus::-webkit-scrollbar-thumb {
+  background-color: #f9db05;
+}
+
+/* Estilo para o textarea com altura fixa igual ao dos inputs */
+textarea {
+  height: 50px;
+  /* Defina a mesma altura que os inputs */
+  resize: none;
+  /* Desabilita o redimensionamento do textarea */
+  overflow: auto;
+  /* Permite rolagem interna, se necessário */
+}
+
+/* Estilo para o contêiner de botões */
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo dos botões */
+.form-button {
+  background-color: #3d3537;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 0 15px;
+  font-weight: 600;
+}
+
+/* Efeito de hover nos botões */
+.form-button.salvar:hover {
+  background-color: #f9db05;
+  color: #000;
+}
+
+.form-button.cancelar:hover {
+  background-color: #b9131c;
+  color: #000;
+}
